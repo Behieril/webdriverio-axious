@@ -1,1 +1,1 @@
-{"uid":"98d3104e051c652961429bf95fa0b5d6","children":[],"name":"suites"}
+{"uid":"98d3104e051c652961429bf95fa0b5d6","children":[{"name":"api request from wdio ","children":[{"name":"check Email","uid":"f47a226d68695525","parentUid":"08752672009167823f2ab8a6e3672799","status":"passed","time":{"start":1669215285892,"stop":1669215286093,"duration":201},"flaky":false,"newFailed":false,"newPassed":false,"newBroken":false,"retriesCount":0,"retriesStatusChange":false,"parameters":["chrome-107.0.5304.87"],"tags":[]}],"uid":"08752672009167823f2ab8a6e3672799"}],"name":"suites"}
