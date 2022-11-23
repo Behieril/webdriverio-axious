@@ -16,7 +16,8 @@
         "wdio-chromedriver-service": "^8.0.0"
     },
     "scripts": {
-        "wdio": "wdio run wdio.conf.js"
+        "test": "wdio run wdio.conf.js & npm run report ",
+        "report": "npx allure generate allure-results --clean -o allure-report"
     },
     "dependencies": {
         "axios": "^1.2.0"
