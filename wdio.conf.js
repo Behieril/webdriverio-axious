@@ -14,7 +14,10 @@ exports.config = {
     maxInstances: 5,
     capabilities: [{
         maxInstances: 1,
-        browserName: 'chrome',
+        browserName: "chrome",
+        'goog:chromeOptions': {
+            args: ['--headless', '--start-maximized', '--no-sandbox', '--disable-gpu', '--allow-insecure-localhost']
+        },
         acceptInsecureCerts: true
     },
     ],
@@ -25,9 +28,7 @@ exports.config = {
     waitforTimeout: 20000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
-    services: [
-        ['chromedriver']
-    ],
+    services: [['chromedriver', {chrome: 'latest'}]],
     framework: 'mocha',
     // reporters: ['spec'],
     reporters: [['allure', {
