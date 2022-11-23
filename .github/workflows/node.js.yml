@@ -1,0 +1,46 @@
+name: Test and create report
+
+on:
+  push:
+    branches: [ main ]
+  # pull_request:
+  #   branches: [ master ]
+
+jobs:
+  Run_test:
+    runs-on: ubuntu-20.04 # Choosing OS
+    strategy:
+      matrix:
+        node-version: [18.12.0]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+      # trying to install npm packages
+    - run: npm i -g npm@latest
+    - run: npm i npm@latest
+    - run: npm i
+    - name: run test
+      # trying to run tests
+      run: npm run test
+    - name: Create report
+      if: always()
+      run: npm run report
+    - name: Upload artifact allure-report
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: allure-report
+        path: ./allure-report
+    - name: Deploy to pages
+      if: always()
+      uses: peaceiris/actions-gh-pages@v3.7.3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: GitHubPages
+        publish_dir: allure-report/
+
