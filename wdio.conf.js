@@ -4,7 +4,7 @@ exports.config = {
     runner: 'local',
     specs: [
         './test/specs/**/*.js',
-        //'./test/specs/structure/StructureProperties.spec.js'
+
     ],
 
     // Patterns to exclude.
