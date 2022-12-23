@@ -1,2 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Fri Dec 23 00:56:10 UTC 2022","Fri Dec 23 00:56:10 UTC 2022","416","","api request from wdio ","","api request from wdio ","check Email","check Email",""
+"passed","Fri Dec 23 01:15:09 UTC 2022","Fri Dec 23 01:15:09 UTC 2022","195","","api request from wdio ","","api request from wdio ","check Email","check Email",""
