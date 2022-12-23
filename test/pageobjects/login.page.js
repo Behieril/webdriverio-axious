@@ -1,4 +1,4 @@
-const axios = require('axios');
+const axios = require('axios').default;
 /**
  * sub page containing specific selectors and methods for a specific page
  */
