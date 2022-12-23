@@ -1,5 +1,5 @@
 const LoginPage = require('../pageobjects/login.page');
-const axios = require('axios');
+const axios = require('axios').default;
 
 describe('api request from wdio ', () => { 
     it('check Email', async () => { 
